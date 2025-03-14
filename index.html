@@ -1,95 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Krishiratan - Home</title>
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-<style>
-  body {
-      font-family: Arial, sans-serif;
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Layout Fix */
+    html,
+    body {
+      height: 100%;
       margin: 0;
-      background-color: #f4f4f4;
-  }
+      font-family: Arial, sans-serif;
+      background-color: rgb(253, 253, 253);
+      color: #333;
+    }
 
-  /* Navbar */
-  .navbar {
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1; /* Takes up remaining space */
+    }
+
+    /* Header / Navbar */
+    header {
+      background-color: #2e7d32;
+      color: white;
+      padding: 15px 30px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background-color: #2e7d32;
-      padding: 15px 30px;
-      color: white;
-  }
+      flex-wrap: wrap;
+    }
 
-  .navbar h1 {
+    header h1 {
       margin: 0;
       font-size: 24px;
-  }
+    }
 
-  .nav-links {
+    nav {
       display: flex;
       gap: 20px;
-  }
+      flex-wrap: wrap;
+    }
 
-  .nav-links a {
+    nav a {
       color: white;
       text-decoration: none;
       font-weight: bold;
       padding: 8px 16px;
       border-radius: 4px;
-  }
+      transition: background-color 0.3s ease;
+    }
 
-  .nav-links a:hover {
+    nav a:hover {
       background-color: #1b5e20;
-  }
+    }
 
-  /* Main Content */
-  .main {
+    /* Main Section */
+    .main {
       padding: 40px 20px;
       text-align: center;
-  }
+    }
 
-  .main h2 {
+    .main h2 {
       margin-bottom: 20px;
-  }
+      color: #2e7d32;
+    }
 
-  /* Cards for Sensor Data */
-  .cards {
+    .main p {
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
+
+    /* Cards */
+    .cards {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       gap: 20px;
-  }
+    }
 
-  .card {
+    .card {
       background-color: white;
       padding: 20px;
       border-radius: 10px;
       width: 250px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
+      transition: transform 0.3s ease;
+    }
 
-  .card h3 {
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
       margin-bottom: 10px;
       color: #2e7d32;
-  }
+    }
 
-  .value {
+    .value {
       font-size: 28px;
       font-weight: bold;
-  }
-  footer {
-            background-color: #4CAF50;
-            color: white;
-            text-align: center;
-            padding: 1rem 0;
-            margin-top: 3rem;
-        }
-</style>
+      color: #333;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
 <body>
+
+  <!-- Header / Navbar -->
   <header>
-    <h1>Welcome to Krishiratan</h1>
+    <h1>Krishiratan</h1>
     <nav>
       <a href="about/index.html">About</a>
       <a href="contact/index.html">Contact</a>
@@ -98,49 +140,53 @@
     </nav>
   </header>
 
-  <main>
+  <!-- Main Section -->
+  <main class="main">
     <h2>Empowering Farmers with Smart Soil Monitoring</h2>
     <p>Explore our solutions and services to improve your farming techniques.</p>
-  </main>
-      <!-- Main Content -->
-      <div class="main">
-        <h2>Real-Time Soil Monitoring Updates</h2>
 
-        <div class="cards">
-            <div class="card">
-                <h3>Soil Moisture</h3>
-                <div class="value">35%</div>
-            </div>
+    <h2>Real-Time Soil Monitoring Updates</h2>
+    
 
-            <div class="card">
-                <h3>Temperature</h3>
-                <div class="value">27°C</div>
-            </div>
+    <div class="cards">
+      <div class="card">
+        <h3>Soil Moisture</h3>
+        <div class="value">35%</div>
+      </div>
 
-            <div class="card">
-                <h3>Nitrogen (N)</h3>
-                <div class="value">45 mg/kg</div>
-            </div>
+      <div class="card">
+        <h3>Temperature</h3>
+        <div class="value">27°C</div>
+      </div>
 
-            <div class="card">
-                <h3>Phosphorus (P)</h3>
-                <div class="value">12 mg/kg</div>
-            </div>
+      <div class="card">
+        <h3>Nitrogen (N)</h3>
+        <div class="value">45 mg/kg</div>
+      </div>
 
-            <div class="card">
-                <h3>Potassium (K)</h3>
-                <div class="value">30 mg/kg</div>
-            </div>
+      <div class="card">
+        <h3>Phosphorus (P)</h3>
+        <div class="value">12 mg/kg</div>
+      </div>
 
-            <div class="card">
-                <h3>Volumetric Water Content</h3>
-                <div class="value">25%</div>
-            </div>
-        </div>
+      <div class="card">
+        <h3>Potassium (K)</h3>
+        <div class="value">30 mg/kg</div>
+      </div>
+
+      <div class="card">
+        <h3>Volumetric Water Content</h3>
+        <div class="value">25%</div>
+      </div>
     </div>
-    <footer>
-      <p>&copy; 2025 Krishiratan. All rights reserved.</p>
-      <p>Contact us: info@krishiratan.com</p>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Krishiratan. All rights reserved.</p>
+    <p>Contact us: <a href="mailto:info@krishiratan.com">info@krishiratan.com</a></p>
   </footer>
+
 </body>
+
 </html>

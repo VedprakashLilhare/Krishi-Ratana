@@ -1,183 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Krishiratan - Soil Monitoring System</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-        }
 
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 1rem 0;
-            text-align: center;
-        }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Krishi-Ratana - Smart Soil Monitoring System</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
 
-        .container {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-
-        h1, h2, h3 {
-            color: #2e7d32;
-        }
-
-        .features {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            justify-content: center;
-            margin-top: 2rem;
-        }
-
-        .feature-card {
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            padding: 1.5rem;
-            flex: 1 1 300px;
-            text-align: center;
-        }
-
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            justify-content: center;
-            margin-top: 2rem;
-        }
-
-        .gallery img {
-            width: 100%;
-            max-width: 350px;
-            border-radius: 10px;
-        }
-
-        footer {
-            background-color: #4CAF50;
-            color: white;
-            text-align: center;
-            padding: 1rem 0;
-            margin-top: 3rem;
-        }
-
-        .cta {
-            text-align: center;
-            margin: 3rem 0;
-        }
-
-        .cta a {
-            background-color: #2e7d32;
-            color: white;
-            padding: 1rem 2rem;
-            text-decoration: none;
-            border-radius: 50px;
-            font-size: 1.2rem;
-            transition: background 0.3s ease;
-        }
-
-        .cta a:hover {
-            background-color: #1b5e20;
-        }
-          /* Navbar */
-  .navbar {
+    /* Navbar Styles */
+    .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
       background-color: #2e7d32;
       padding: 15px 30px;
       color: white;
-  }
+    }
 
-  .navbar h1 {
-      margin: 0;
-      font-size: 24px;
-  }
+    .site-title {
+      font-size: 28px;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+    }
 
-  .nav-links {
+    .site-title:hover {
+      color: #c8e6c9;
+    }
+
+    .nav-links {
       display: flex;
       gap: 20px;
-  }
+    }
 
-  .nav-links a {
+    .nav-links a {
       color: white;
       text-decoration: none;
       font-weight: bold;
       padding: 8px 16px;
       border-radius: 4px;
-  }
+      transition: background 0.3s ease;
+    }
 
-  .nav-links a:hover {
+    .nav-links a:hover {
       background-color: #1b5e20;
-  }
-    </style>
+    }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: #2e7d32;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    /* Features Section */
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    .feature-card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      padding: 1.5rem;
+      flex: 1 1 300px;
+      text-align: center;
+    }
+
+    /* Gallery Section */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      max-width: 350px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    /* CTA */
+    .cta {
+      text-align: center;
+      margin: 3rem 0;
+    }
+
+    .cta a {
+      background-color: #2e7d32;
+      color: white;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      border-radius: 50px;
+      font-size: 1.2rem;
+      transition: background 0.3s ease;
+    }
+
+    .cta a:hover {
+      background-color: #1b5e20;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+
 <body>
-  <header>
-    <h1>Krishi-Ratana</h1>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="contact/index.html">Contact</a>
-        <a href="shop/index.html">Shop</a>
-        <a href="articles/index.html">Articles</a>
-      </nav>
-</header>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="/index.html" class="site-title">Krishi-Ratana</a>
+    <div class="nav-links">
+      <a href="/index.html">Home</a>
+      <a href="/contact/index.html">Contact</a>
+      <a href="/shop/index.html">Shop</a>
+      <a href="/articles/index.html">Articles</a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
   <div class="container">
 
     <h2>About Us</h2>
-      <p>The “Krishi-Ratana” focuses on creating a comprehensive smart agriculture system that leverages various sensors to monitor and manage critical agricultural parameters in real-time. Among these sensors, the Nitrogen-Phosphorus-Potassium (NPK) sensor plays a pivotal role in assessing soil nutrient levels, ensuring that crops receive the optimal balance of essential nutrients for healthy growth.
-        In addition to the NPK sensor, the Krishi-Ratana system incorporates soil moisture sensors, temperature sensors, and humidity sensors. Soil moisture sensors measure the water content in the soil, enabling precise irrigation management to prevent both overwatering and underwatering. Temperature sensors monitor the ambient temperature, ensuring that crops are grown under optimal thermal conditions. Humidity sensors track the moisture levels in the air, which is crucial for maintaining the right environment for crop development.
-        By collecting data from these sensors, the Krishi-Ratana system provides farmers with actionable insights and automated solutions to optimize irrigation, fertilization, and pest control. The data is transmitted to a central cloud-based platform where advanced algorithms analyze it to generate recommendations for farmers. This real-time data analysis helps in making informed decisions, ultimately enhancing crop yield and quality.
-        The Krishi-Ratana project aims to promote sustainable farming practices by optimizing resource use and reducing environmental impact. By leveraging IoT technologies, the project envisions a future where agriculture is more efficient, productive, and eco-friendly, contributing to food security and the well-being of the agricultural community.
-        </p>
+    <p>
+      The “Krishi-Ratana” focuses on creating a comprehensive smart agriculture system that leverages various sensors to monitor and manage critical agricultural parameters in real-time. Among these sensors, the Nitrogen-Phosphorus-Potassium (NPK) sensor plays a pivotal role in assessing soil nutrient levels, ensuring that crops receive the optimal balance of essential nutrients for healthy growth.
+    </p>
+    <p>
+      In addition to the NPK sensor, the Krishi-Ratana system incorporates soil moisture sensors, temperature sensors, and humidity sensors. Soil moisture sensors measure the water content in the soil, enabling precise irrigation management to prevent both overwatering and underwatering. Temperature sensors monitor the ambient temperature, ensuring that crops are grown under optimal thermal conditions. Humidity sensors track the moisture levels in the air, which is crucial for maintaining the right environment for crop development.
+    </p>
+    <p>
+      By collecting data from these sensors, the Krishi-Ratana system provides farmers with actionable insights and automated solutions to optimize irrigation, fertilization, and pest control. The data is transmitted to a central cloud-based platform where advanced algorithms analyze it to generate recommendations for farmers. This real-time data analysis helps in making informed decisions, ultimately enhancing crop yield and quality.
+    </p>
+    <p>
+      The Krishi-Ratana project aims to promote sustainable farming practices by optimizing resource use and reducing environmental impact. By leveraging IoT technologies, the project envisions a future where agriculture is more efficient, productive, and eco-friendly, contributing to food security and the well-being of the agricultural community.
+    </p>
 
-      <h2>Our Story</h2>
+    <h2>Our Story</h2>
+    <p>
+      Krishiratan was created to bring advanced technology to the fields of every farmer. By providing easy-to-use tools and real-time data, we help farmers make informed decisions, leading to better yields and healthier crops.
+    </p>
 
-        <p>Krishiratan was created to bring advanced technology to the fields of every farmer. By providing easy-to-use tools and real-time data, we help farmers make informed decisions, leading to better yields and healthier crops.</p>
-      
-
-      <h2>What We Do</h2>
-      <div class="features">
-          <div class="feature-card">
-              <h3>Real-Time Monitoring</h3>
-              <p>Track moisture, pH, and nutrients instantly.</p>
-          </div>
-          <div class="feature-card">
-              <h3>Weather Integration</h3>
-              <p>Plan irrigation based on accurate weather data.</p>
-          </div>
-          <div class="feature-card">
-              <h3>Data-Driven Recommendations</h3>
-              <p>Receive tailored suggestions to optimize your crops.</p>
-          </div>
+    <h2>What We Do</h2>
+    <div class="features">
+      <div class="feature-card">
+        <h3>Real-Time Monitoring</h3>
+        <p>Track moisture, pH, and nutrients instantly.</p>
       </div>
-
-      
-      <div class="gallery">
-          <img src="/about/Sensor in the Field.jpg">
-          <img src="Mobile App Dashboard.jpg">
-          <img src="Farmer Using Krishiratan.jpg">
-          <img src="Healthy Crops.jpeg">
-          <img src="vertical.jpeg">
+      <div class="feature-card">
+        <h3>Weather Integration</h3>
+        <p>Plan irrigation based on accurate weather data.</p>
       </div>
-
-      <div class="cta">
-          <h2>Join the Krishiratan Revolution Today!</h2>
+      <div class="feature-card">
+        <h3>Data-Driven Recommendations</h3>
+        <p>Receive tailored suggestions to optimize your crops.</p>
       </div>
+    </div>
+
+    <!-- Gallery -->
+    <div class="gallery">
+      <img src="/about/Sensor in the Field.jpg" alt="Sensor installed in the field">
+      <img src="Mobile App Dashboard.jpg" alt="Mobile App Dashboard for Krishiratan">
+      <img src="Farmer Using Krishiratan.jpg" alt="Farmer using Krishiratan system">
+      <img src="Healthy Crops.jpeg" alt="Healthy crops grown with Krishiratan">
+      <img src="vertical.jpeg" alt="Vertical farming using Krishiratan technology">
+    </div>
+
+    <!-- CTA -->
+    <div class="cta">
+      <h2>Join the Krishiratan Revolution Today!</h2>
+      <a href="/contact/index.html">Get Started</a>
+    </div>
+
   </div>
 
+  <!-- Footer -->
   <footer>
-      <p>&copy; 2025 Krishiratan. All rights reserved.</p>
-      <p>Contact us: info@krishiratan.com</p>
+    <p>&copy; 2025 Krishiratan. All rights reserved.</p>
+    <p>Contact us: <a href="mailto:info@krishiratan.com" style="color: white;">info@krishiratan.com</a></p>
   </footer>
+
 </body>
+
 </html>

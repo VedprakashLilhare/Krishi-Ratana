@@ -1,25 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Shop - Krishiratan</title>
-  <link rel="stylesheet" href="../css/styles.css">
-</head>
-<body>
-  <header>
-    <h1>Shop - Krishiratan</h1>
-    <nav>
-      <a href="../index.html">Home</a>
-      <a href="../about/index.html">About</a>
-      <a href="../contact/index.html">Contact</a>
-      <a href="../shop/index.html">Shop</a>
-      <a href="../articles/index.html">Articles</a>
-    </nav>
-  </header>
 
-  <main>
-    <h2>Shop</h2>
-    <p>This is the Shop page of Krishiratan.</p>
-  </main>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Krishiratan</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        /* Reset & Base Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Header Section */
+        header {
+            background-color: #2e7d32;
+            color: #fff;
+            padding: 15px 30px;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-container img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        nav {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            font-weight: bold;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav a:hover,
+        nav a:focus {
+            background-color: #1b5e20;
+            color: #e0e0e0;
+        }
+
+        /* Main Content */
+        main {
+            flex: 1;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+
+        main h2 {
+            color: #2d6a4f;
+            margin-bottom: 20px;
+        }
+
+        main p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Shop Items */
+        .shop-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .shop-item {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .shop-item img {
+            max-width: 150px;
+            margin-bottom: 15px;
+        }
+
+        .shop-item h3 {
+            margin-bottom: 10px;
+            color: #2d6a4f;
+        }
+
+        .shop-item p {
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .shop-item button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .shop-item button:hover {
+            background-color: #388E3C;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #4CAF50;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        footer a:hover,
+        footer a:focus {
+            color: #d4d4d4;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav {
+                justify-content: center;
+            }
+
+            .logo {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <a href="../index.html" class="logo">Krishiratan</a>
+            </div>
+            <nav aria-label="Primary Navigation">
+                <a href="../index.html">Home</a>
+                <a href="../about/index.html">About</a>
+                <a href="../contact/index.html">Contact</a>
+                <a href="../articles/index.html">Articles</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h2>Shop</h2>
+        <p>Welcome to the Krishiratan shop! Explore our premium range of agricultural monitoring systems and hardware designed to boost your productivity and sustainability.</p>
+
+        <div class="shop-items">
+            <div class="shop-item">
+                <img src="/shop/demo.jpeg" alt="Take a Demo">
+                <h3>Take a Demo</h3>
+                <p>Experience our monitoring system with a demo setup. Includes basic sensors and software access.</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="shop-item">
+                <img src="/shop/hard.jpeg" alt="Advanced Hardware Kit">
+                <h3>Advanced Hardware Kit</h3>
+                <p>Comprehensive hardware kit with advanced sensors for detailed environmental monitoring.</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="shop-item">
+                <img src="/shop/npk.jpg" alt="Soil Moisture Sensor">
+                <h3>Soil Moisture Sensor</h3>
+                <p>High-precision soil moisture sensor for accurate irrigation management.</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Krishiratan. All rights reserved.</p>
+        <p>Contact us: <a href="mailto:info@krishiratan.com">info@krishiratan.com</a></p>
+    </footer>
+
 </body>
+
 </html>
